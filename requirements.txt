@@ -1,0 +1,8 @@
+fastapi~=0.116.0
+uvicorn[standard]
+sqlalchemy~=2.0.41
+pymysql
+python-dotenv~=1.1.1
+passlib[bcrypt]~=1.7.4
+
+pydantic~=2.11.7
