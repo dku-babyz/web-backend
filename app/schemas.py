@@ -9,7 +9,29 @@ class UserCreate(BaseModel):
 
 class User(UserBase):
     id: int
+    client_id: str
     is_active: bool
+
+    class Config:
+        from_attributes = True
+
+
+class AlterWordBase(BaseModel):
+    original_word: str
+    site_url: str
+    client_id: str
+
+class AlterWordCreate(AlterWordBase):
+    original_word: str
+    site_url: str
+    client_id: str
+
+class AlterWord(AlterWordBase):
+    id: int
+    original_word: str
+    alter_word: str
+    site_url: str
+    client_id: str
 
     class Config:
         from_attributes = True
