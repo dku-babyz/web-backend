@@ -17,3 +17,12 @@ class AlterWord(Base):
     alter_word = Column(String(255))
     site_url = Column(String(255))
     client_id = Column(String(128), index=True)
+
+class AlterImage(Base):
+    __tablename__ = "alter_image"
+
+    id = Column(Integer, primary_key=True, index=True)
+    original_image_url = Column(String(255))
+    alter_image_url = Column(String(255))
+    site_url = Column(String(255))
+    client_id = Column(String(128), index=True)

@@ -33,5 +33,32 @@ class AlterWord(AlterWordBase):
     site_url: str
     client_id: str
 
+    def dict(self, **kwargs):
+        return self.model_dump(**kwargs)
+
+    class Config:
+        from_attributes = True
+
+
+class AlterImageBase(BaseModel):
+    original_image_url: str
+    site_url: str
+    client_id: str
+
+class AlterImageCreate(AlterImageBase):
+    original_image_url: str
+    site_url: str
+    client_id: str
+
+class AlterImage(AlterImageBase):
+    id: int
+    original_image_url: str
+    alter_image_url: str
+    site_url: str
+    client_id: str
+
+    def dict(self, **kwargs):
+        return self.model_dump(**kwargs)
+
     class Config:
         from_attributes = True
